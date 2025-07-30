@@ -1,6 +1,6 @@
 ####align genome using lastz##############
-#make_lastz_chains/make_chains.py Al Hs Al.rename.fasta GRCh38.rename.fasta --pd Al_Hs -f --chaining_memory 8
-#chainToAxt Al.Hs.final.chain Al.rename.2bit Hs.rename.2bit Al.Hs.final.axt
+make_lastz_chains/make_chains.py Al Hs Al.rename.fasta GRCh38.rename.fasta --pd Al_Hs -f --chaining_memory 8
+chainToAxt Al.Hs.final.chain Al.rename.2bit Hs.rename.2bit Al.Hs.final.axt
 
 ####record the chromosome length infomation
 open(DATA,"</$work_dir/CNE/GRCh38.rename.fasta.fai") or die "can't open data";
@@ -52,7 +52,7 @@ while(<DATA>){
 close(DATA);
 
 
-####extract he block which length >20 and identify>60%, and convert the coordinates of minus strand
+####extract the block which length >20 and identify>60%, and convert the coordinates of minus strand
 @file=glob("/$work_dir/CNE/axt/*.axt");
 
 for $filename(@file){
@@ -130,17 +130,17 @@ for $filename(@file){
 
 
 #####intersect target candidates using bedtools
-#bedtools intersect -a Alref.Hs.final.sort.merge.bed -b Alref.Mm.final.sort.merge.bed >Alref.intersect2.bed
+bedtools intersect -a Alref.Hs.final.sort.merge.bed -b Alref.Mm.final.sort.merge.bed >Alref.intersect2.bed
 #
-#bedtools intersect -a Alref.intersect2.bed -b Alref.Oa.final.sort.merge.bed >Alref.intersect3.bed
+bedtools intersect -a Alref.intersect2.bed -b Alref.Oa.final.sort.merge.bed >Alref.intersect3.bed
 #
-#bedtools intersect -a Alref.intersect3.bed -b Alref.Gg.final.sort.merge.bed >Alref.intersect4.bed
+bedtools intersect -a Alref.intersect3.bed -b Alref.Gg.final.sort.merge.bed >Alref.intersect4.bed
 #
-#bedtools intersect -a Alref.intersect4.bed -b Alref.Lo.final.sort.merge.bed >Alref.intersect5.bed
+bedtools intersect -a Alref.intersect4.bed -b Alref.Lo.final.sort.merge.bed >Alref.intersect5.bed
 #
-#bedtools intersect -a Alref.intersect5.bed -b Alref.Xt.final.sort.merge.bed >Alref.intersect6.bed
+bedtools intersect -a Alref.intersect5.bed -b Alref.Xt.final.sort.merge.bed >Alref.intersect6.bed
 #
-#bedtools intersect -a Alref.intersect6.bed -b Dp5.anno.block.len20.ide60.txt >Alref.intersect7.bed
+bedtools intersect -a Alref.intersect6.bed -b Dp5.anno.block.len20.ide60.txt >Alref.intersect7.bed
 
 
 #########convert Al coordinates to Hs and make pair###########
