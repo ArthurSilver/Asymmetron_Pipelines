@@ -13,4 +13,4 @@ Perl script for scanning the conserved blocks based on the chainNet file generat
 ### Record the chromosome length infomation
 To convert the coordinates of minus strand, we need to record the chromosome length of each species.
 ### Extract the block which length >20 and identify>60%, and convert the coordinates of minus strand
-Extract the candidate pair alignment and record 
+Extract the candidate pair alignment and record the coordinates, noticed that the minus strand need to convert the coordinates.
