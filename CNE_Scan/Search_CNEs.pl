@@ -52,7 +52,7 @@ while(<DATA>){
 close(DATA);
 
 
-####extract the block which length >20 and identify>60%, and convert the coordinates of minus strand
+####extract the block which length >20 and identity>60%, and convert the coordinates of minus strand
 @file=glob("/$work_dir/CNE/axt/*.axt");
 
 for $filename(@file){
