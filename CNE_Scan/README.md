@@ -18,9 +18,9 @@ Extract the candidate conserved paired alignments between Alu and other vertebra
 ### Intersect target candidates using bedtools
 Intersect these candidates bed file one by one, find the conserved region between Alu and 6 vertebrates.
 ### Convert Al coordinates to Hs and make pair
-
-### Extract sequence from block pair, align again using muscle and the second screening
-
+Convert the Alu coordinates to the corresponding Hsa coordinates for further screening and annotating.
+### Extract sequence from block pair, align again using muscle and the second round screening
+Using bedtools to extract sequence based on Alu coordinates and corresponding Hsa coordinates, generated paired sequences and aligned using Muscle, then conducted a second round of screening (length >20 and identity>60%).
 ### Annotate the block pair and screen the results based on the annotation
+After the second round of screening, annotating these candidates based on Alu and Hsa annotation, repectively, then counducted the third round of screening based on the annotation(same genetic region and relevant genes are homologous).
 
-### Screen the block pair based on annotation
