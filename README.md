@@ -11,6 +11,8 @@ Pipeline utilizing EDTA and RepeatMasker to mask the genome
 ## synteny
 ### macrosyntR.R
 R script utilizing R package macrosyntR to plot the Oxford dotplot
+### synteny_block
+Pipeline to find the continuous synteny block
 
 ## CNE_Scan
 ### Search_Conserved_Bases.pl
