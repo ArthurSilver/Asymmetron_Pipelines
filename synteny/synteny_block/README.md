@@ -1,5 +1,5 @@
-# Amphioxus Conserved Gene Cluster Identification Pipeline
-A bioinformatics pipeline to identify conserved gene clusters across multiple amphioxus species (Alref, Bb, Bf, Bj, Bl) using collinearity data from MCScanX results.
+# Amphioxus Conserved Synteny Block Identification Pipeline
+A bioinformatics pipeline to identify conserved synteny gene clusters across multiple amphioxus species (Alu, Bbe, Bfl, Bja, Bla) using collinearity data from MCScanX results.
 ## This pipeline consists of three core steps to detect cross-species conserved continuous gene clusters in amphioxus genomes:
 step0.Extract conserved collinear gene pairs across target species from MCScanX collinearity files
 
